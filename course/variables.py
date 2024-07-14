@@ -1,6 +1,6 @@
 # variables
 
-#----------------str (strings)----------------#
+#----------------str(strings)----------------#
 
 first_name = "Joca"
 last_name = "Martins"
@@ -17,7 +17,7 @@ print(full_name)
 print("Ola " + full_name)
 
 
-#----------------int (integer)----------------#
+#----------------int(integer)----------------#
 
 age = 20
 age_next_year = age + 1
@@ -37,7 +37,7 @@ print("Your height is " + str(height) + "cm")
 print(type(height))
 
 
-#---------------------bool--------------------#
+#--------------------bool--------------------#
 
 human = True
 print(type(human))
