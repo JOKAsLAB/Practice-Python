@@ -8,6 +8,7 @@ capitals = { "USA" : "Washington DC",
 capitals.update({"Germany" : "Berlin"})
 capitals.update({"USA" : "Las Vegas"})
 capitals.pop("India")
+# capitals.clear()
 
 print(capitals["China"])
 print(capitals.get("Germany"))
