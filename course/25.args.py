@@ -1,4 +1,4 @@
-# args
+# *args
 
 def add(*stuff):
     sum = 0
