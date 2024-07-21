@@ -1,4 +1,4 @@
-# 40.Object Oriented Programming (OOP)
+# Object Oriented Programming (OOP)
 
 from car import Car
 
