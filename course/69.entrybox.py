@@ -21,8 +21,9 @@ entry = Entry(window,
               bg="black",
               show="*")
 
-entry.insert(0, "Spongebob")
-entry.pack(side=LEFT)
+# entry.insert(0, "Spongebob")
+# entry.pack(side=LEFT)
+# entry.config(state=DISABLED)
 
 submit_button = Button(window, text="submit", command=submit)
 submit_button.pack(side=RIGHT)
