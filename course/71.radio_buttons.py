@@ -16,9 +16,9 @@ def order():
 
 window = Tk()
 
-pizzaImage = PhotoImage(file="course\\66.jokas_lab.png")
-hamburgerImage = PhotoImage(file="course\\66.jokas_lab.png")
-hotdogImage = PhotoImage(file="course\\66.jokas_lab.png")
+pizzaImage = PhotoImage(file="course\\71.hamburger.png")
+hamburgerImage = PhotoImage(file="course\\71.hamburger.png")
+hotdogImage = PhotoImage(file="course\\71.hamburger.png")
 foodImages = [pizzaImage, hamburgerImage, hotdogImage]
 
 x = IntVar()
