@@ -7,6 +7,10 @@ def submit():
 
 window = Tk()
 
+imagem = PhotoImage(file="course\\71.hamburger.png")
+label = Label(image=imagem)
+label.pack()
+
 scale = Scale(window,
               from_ = 100,
               to = 0,
@@ -24,6 +28,10 @@ scale = Scale(window,
 
 scale.set(((scale["from"]-scale["to"])/2)+scale["to"])
 scale.pack()
+
+imagem2 = PhotoImage(file="course\\71.hamburger.png")
+label2 = Label(image=imagem2)
+label2.pack()
 
 button = Button(window, text="submit", command= submit)
 button.pack()
