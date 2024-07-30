@@ -3,6 +3,7 @@
 from tkinter import *
 
 def create_window():
+    # new_window = Toplevel()
     new_window = Tk()
     
     old_window.destroy()
