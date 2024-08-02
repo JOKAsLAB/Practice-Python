@@ -13,6 +13,9 @@ window = Tk()
 canvas = Canvas(window, width=WIDTH, height=HEIGHT)
 canvas.pack()
 
+background_photo = PhotoImage(file="course\\66.jokas_lab.png")
+background = canvas.create_image(0, 0, image= background_photo, anchor=NW)
+
 photo_image = PhotoImage(file="course\\71.hamburger.png")
 my_image = canvas.create_image(0, 0, image= photo_image, anchor=NW)
 
