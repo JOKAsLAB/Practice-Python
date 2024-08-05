@@ -50,4 +50,17 @@ y = int((screen_height / 2) - (window_height / 2))
 
 window.geometry("{}x{}+{}+{}".format(window_width, window_height, x, y))
 
+font_name = StringVar(window)
+font_name.set("Arial")
+
+font_size = StringVar(window)
+font_size.set("25")
+
+text_area = Text(window, font=(font_name.get(), font_size.get()))
+
+scroll_bar = Scrollbar(text_area)
+window.grid_rowconfigure(0, weight=1)
+window.grid_columnconfigure(0, weight=1)
+text_area.grid(sticky=N + E + S + W)
+
 window.mainloop()
