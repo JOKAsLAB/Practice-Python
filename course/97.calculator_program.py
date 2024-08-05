@@ -27,7 +27,12 @@ def equals():
         equation_text = ""
 
 def clear():
-    pass
+    
+    global equation_text
+    
+    equation_label.set("")
+    equation_text = ""
+    
 
 window = Tk()
 window.title("Calculator program")
