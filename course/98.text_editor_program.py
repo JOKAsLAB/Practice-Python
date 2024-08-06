@@ -14,28 +14,44 @@ def change_font(*args):
     text_area.config(font=(font_name.get(), size_box.get()))
 
 def new_file():
-    pass
+    window.title("Untitled")
+    text_area.delete(1.0, END)
 
 def open_file():
-    pass
+    file = askopenfilename(defaultextension=".txt", file=[("All Files", "*.*"),
+                                                          ("Text Documents", "*.txt")])
+    
+    try:
+        window.title(os.path.basename(file))
+        text_area.delete(1.0, END)
+        
+        file = open(file, "r")
+        
+        text_area.insert(1.0, file.read())
 
+    except Exception:
+        print("couldn't read file")
+        
+    finally:
+        file.close()    
+        
 def save_file():
     pass
 
 def cut():
-    pass    
+    text_area.event_generate("<<Cut>>")
 
 def copy():
-    pass
+    text_area.event_generate("<<Copy>>")
 
 def paste():
-    pass
+    text_area.event_generate("<<Paste>>")
 
 def about():
-    pass
+    showinfo("About this program", "This is a program written by YOUUUUUUUUU!")
 
 def quit():
-    pass
+    window.destroy()
 
 window = Tk()
 window.title("Text editor program")
@@ -98,6 +114,6 @@ edit_menu.add_command(label="Paste", command=paste)
 
 help_menu = Menu(menu_bar, tearoff=0)
 menu_bar.add_cascade(label="Help", menu=help_menu)
-help_menu.add_command(label="About", command=paste)
+help_menu.add_command(label="About", command=about)
 
 window.mainloop()
