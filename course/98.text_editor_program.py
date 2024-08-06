@@ -63,6 +63,8 @@ scroll_bar = Scrollbar(text_area)
 window.grid_rowconfigure(0, weight=1)
 window.grid_columnconfigure(0, weight=1)
 text_area.grid(sticky=N + E + S + W)
+scroll_bar.pack(side=RIGHT, fill=Y)
+text_area.config(yscrollcommand=scroll_bar.set)
 
 frame = Frame(window)
 frame.grid()
@@ -76,7 +78,16 @@ font_box.grid(row=0, column=1)
 size_box = Spinbox(frame, from_=1, to=100, textvariable=font_size, command=change_font)
 size_box.grid(row=0, column=2)
 
-scroll_bar.pack(side=RIGHT, fill=Y)
-text_area.config(yscrollcommand=scroll_bar.set)
+menu_bar = Menu(window)
+window.config(menu=menu_bar)
+
+file_menu = Menu(menu_bar, tearoff=0)
+menu_bar.add_cascade(label="File", menu=file_menu)
+
+file_menu.add_command(label="New", command=new_file)
+file_menu.add_command(label="Open", command=open_file)
+file_menu.add_command(label="Save", command=save_file)
+file_menu.add_separator()
+file_menu.add_command(label="Exit", command=quit)
 
 window.mainloop()
