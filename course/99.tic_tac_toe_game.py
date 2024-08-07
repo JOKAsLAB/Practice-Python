@@ -68,13 +68,27 @@ def check_winner():
         return True
 
     elif empty_spaces() is False:
+        
+        for row in range(3):
+            for column in range(3):
+                buttons[row][column].config(bg="yellow")
         return "Tie"
     
     else:
         return False
 
 def empty_spaces():
-    pass
+    spaces = 9
+
+    for row in range(3):
+        for column in range(3):
+            if buttons[row][column]['text'] != "":
+                spaces -= 1
+
+    if spaces == 0:
+        return False
+    else:
+        return True
 
 def new_game():
     pass
